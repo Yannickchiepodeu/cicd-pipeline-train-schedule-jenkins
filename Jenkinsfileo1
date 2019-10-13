@@ -1,0 +1,12 @@
+pipeline {
+  angent any
+  stages {
+    stages{ 'build') {
+      stages {
+        echo 'running build automation'
+        sh './gradlew build --no-daemon'
+        archiveArtifact artifacts: 'dist/trainSchedule.zip'
+        }
+     }
+   }
+ } 
